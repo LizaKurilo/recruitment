@@ -84,10 +84,10 @@ def make_graphs():
 
         
         if st.button('Download all plots'):
-            try:
-                download_plots(sheet_to_df_map, start_date, end_date)
-            except:
-                st.markdown('File does not contain data in this date interval')
+            #try:
+            download_plots(sheet_to_df_map, start_date, end_date)
+            #except:
+                #st.markdown('File does not contain data in this date interval')
           
                 
 
