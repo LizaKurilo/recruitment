@@ -6,6 +6,7 @@ graphviz==0.16
 h5py==2.10.0
 json5==0.9.5
 xlrd
+openpyxl
 matplotlib
 
 
