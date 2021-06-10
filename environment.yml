@@ -1,1 +1,1 @@
-conda install -c plotly plotly-orca
+plotly plotly-orca
