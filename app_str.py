@@ -100,6 +100,7 @@ def make_graphs():
             start_date, end_date = set_date()
         except:
             st.markdown('Change dates')
+            start_date, end_date = set_date()
 
         
         if st.button('Download all plots'):
