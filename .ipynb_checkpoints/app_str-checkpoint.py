@@ -57,7 +57,7 @@ def download_plots(sheet_to_df_map, start_date, end_date):
     df = sheet_to_df_map['JO_Hired']
     plots.make_plots_by_jo_hired_list(df, datetime.datetime(*start_date.timetuple()[:-4]), datetime.datetime(*end_date.timetuple()[:-4]), download=True, path_to_download=dirName)
     create_download_zip(dirName, downloads_path)           
-    st.markdown(f'Successfully downloaded to {dirName}')
+    #st.markdown(f'Successfully downloaded to {dirName}')
 
 
 def create_download_zip(zip_directory, zip_path):
@@ -72,10 +72,11 @@ def create_download_zip(zip_directory, zip_path):
 
         bytes = f.read()
         b64 = base64.b64encode(bytes).decode()
-        href = f'<a href="data:file/zip;base64,{b64}" download=\'{zip_directory}.zip\'>\
+        href = f'<a href="data:file/zip;base64,{b64}" download=\'{zip_directory.split('/')[-1]}.zip\'>\
             Click to download\
         </a>'
-    st.sidebar.markdown(href, unsafe_allow_html=True)
+    st.markdown(href, unsafe_allow_html=True)
+    st.markdown(f'Successfully downloaded to Downloads folder')
         
 def make_graphs():
     local_css("css/styles.css")
