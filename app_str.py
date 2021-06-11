@@ -72,7 +72,8 @@ def create_download_zip(zip_directory, zip_path):
 
         bytes = f.read()
         b64 = base64.b64encode(bytes).decode()
-        href = f'<a href="data:file/zip;base64,{b64}" download=\'{zip_directory.split('/')[-1]}.zip\'>\
+        filename = zip_directory.split('/')[-1]
+        href = f'<a href="data:file/zip;base64,{b64}" download=\'{filename}.zip\'>\
             Click to download\
         </a>'
     st.markdown(href, unsafe_allow_html=True)
