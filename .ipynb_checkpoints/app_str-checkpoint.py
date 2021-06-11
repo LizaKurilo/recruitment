@@ -77,7 +77,7 @@ def create_download_zip(zip_directory, zip_path):
             Click to download\
         </a>'
     st.markdown(href, unsafe_allow_html=True)
-    st.markdown(f'Successfully downloaded to Downloads folder')
+    #st.markdown(f'Successfully downloaded to Downloads folder')
         
 def make_graphs():
     local_css("css/styles.css")
